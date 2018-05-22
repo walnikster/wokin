@@ -4,29 +4,22 @@ import axios from 'axios';
 
 console.clear();
 
-var HelloWorld = React.createClass({
+// this.domainApiUrl = 'http://5879ff5b326f981200e70545.mockapi.io/api/domains';
+
+var Domain = React.createClass({
   render: function() {
     return (
-      <p>Hello, {this.props.greetTarget}!</p>
+      <p>{this.props.id} - {this.props.name}!</p>
     );
   }
 });
 
 ReactDOM.render(
   <div>
-    <HelloWorld greetTarget="Batman"/>
-    <HelloWorld greetTarget="Iron Man"/>
-    <HelloWorld greetTarget="Nicolas Cage"/>
-    <HelloWorld greetTarget="Mega Man"/>
-    <HelloWorld greetTarget="Bono"/>
-    <HelloWorld greetTarget="Catwoman"/>
-	<HelloWorld greetTarget="Anyone else"/>
-	<HelloWorld greetTarget="Anyone else - 2nd"/>
-	<HelloWorld greetTarget="Anyone else - 3rd"/>
-	<HelloWorld greetTarget="Anyone else - 4th"/>
-	<HelloWorld greetTarget="Anyone else - 5th"/>
-	<HelloWorld greetTarget="Anyone else - 5th"/>
-	<HelloWorld greetTarget="Anyone else - 6th"/>
+    <Domain name="domain1.tld" id="1"/>
+	<Domain name="domain2.tld" id="2"/>
+	<Domain name="domain3.tld" id="3"/>
+	
   </div>,
   document.querySelector("#container")
 );
